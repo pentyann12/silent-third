@@ -1,1 +1,10 @@
-<p>news works!</p>
+<section id="news" class="wrapper">
+  <h2 class="sec-title">News</h2>
+  <dl>
+    <ng-container *ngFor="let news of newsList">
+      <dt>{{ news.date | date }}</dt>
+      <dd class="news-cat">{{ news.category }}</dd>
+      <dd class="news-desc">{{ news.description }}</dd>
+    </ng-container>
+  </dl>
+</section>
