@@ -1,1 +1,13 @@
-<p>header works!</p>
+<header id="header">
+  <h1 class="site-title"><a routerLink="/"><img src="logo.svg" alt="Silent third"></a></h1>
+  <nav>
+    <ul>
+      <li *ngFor="let link of links"><a routerLink="link.path">{{ link.title }}</a></li>
+      <li>
+        <a href="https://github.com/pentyann12/silent-third">
+          <img class="icon" src="github-mark.svg" alt="GitHub">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
