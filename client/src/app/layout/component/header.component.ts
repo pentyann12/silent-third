@@ -2,6 +2,9 @@ import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Route, RouterLink } from '@angular/router';
 
+/**
+ * # ページヘッダ
+ */
 @Component({
   selector: 'app-header',
   imports: [RouterLink, NgFor],
@@ -9,10 +12,7 @@ import { Route, RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit{
-  public links: Array<Route> = [];
-
-  /** constructor of {@link HeaderComponent}. */
-  public constructor() {}
+  public links: Route[] = [];
 
   public ngOnInit(): void {
     this.links = [

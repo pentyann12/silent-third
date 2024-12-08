@@ -3,6 +3,9 @@ import { News } from '../domain/news';
 import { DatePipe, NgFor } from '@angular/common';
 import { TopPageService } from '../service/top-page.service';
 
+/**
+ * # ニュース表示欄
+ */
 @Component({
   selector: 'app-news',
   imports: [DatePipe, NgFor],
@@ -10,7 +13,7 @@ import { TopPageService } from '../service/top-page.service';
   styleUrl: './news.component.scss',
 })
 export class NewsComponent implements OnInit {
-  public newsList: Array<News> = []
+  public newsList: News[] = []
 
   /** constructor of {@link NewsComponent}. */
   public constructor(
