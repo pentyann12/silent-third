@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #24292e;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+
+// ---------------------------General Styles---------------------------
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9rem;
+  padding: 0 4%;
+}
+
+.sec-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin-bottom: 70px;
+  }
+}
