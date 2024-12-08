@@ -13,7 +13,7 @@ export class TopPageService {
     @Inject(HttpClient) private http: HttpClient
   ) { }
 
-  public fetchNews(): Observable<Array<News>> {
-    return this.http.get<Array<News>>('/api/news');
+  public fetchNews(): Observable<News[]> {
+    return this.http.get<News[]>('/api/news');
   }
 }

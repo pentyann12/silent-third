@@ -1,13 +1,10 @@
-const newsCategorys = [
-  'release',
-  'update',
-] as const;
-
 /** ニュース区分 */
-export type NewsCategory = (typeof newsCategorys)[number];
+export interface NewsCategory {
+  values: 'release' | 'update';
+}
 
 /** トップページ掲載ニュース */
-export type News = {
+export interface News {
   date: Date,
   category: NewsCategory,
   description: string,
