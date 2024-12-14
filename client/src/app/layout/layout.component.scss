@@ -1,0 +1,66 @@
+.layout .sidebar {
+  background-color: #24292e;
+}
+
+
+// サイドナビゲーションの操作に係るスタイル
+.layout {
+  height: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.layout.has-sidebar {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row
+}
+
+.layout .sidebar {
+  height: 100%;
+  width: 280px;
+  min-width: 280px;
+  top: 0;
+  left: -280px;
+  -webkit-transition: width, left, right, 0.3s;
+  transition: width, left, right, 0.3s;
+  overflow: auto;
+  position: fixed;
+  z-index: 100
+}
+
+.layout .sidebar.toggled {
+  left: 0
+}
+
+.layout .sidebar.toggled~.overlay {
+  display: block
+}
+
+.layout .overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 99;
+  display: none
+}
+
+.layout .sidebar~.layout {
+  height: 100%;
+  overflow: auto
+}

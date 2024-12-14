@@ -1,2 +1,15 @@
-<app-header></app-header>
-<ng-content></ng-content>
+<div class="layout has-sidebar">
+  <!-- サイドバー -->
+  <aside class="sidebar">
+    Sidebar
+  </aside>
+  <div class="overlay"></div>
+
+  <!-- メイン画面 -->
+  <div class="layout">
+    <app-header></app-header>
+    <main>
+      <ng-content></ng-content>
+    </main>
+  </div>
+</div>
