@@ -1,9 +1,9 @@
 <div class="layout has-sidebar">
   <!-- サイドバー -->
-  <aside class="sidebar">
+  <aside class="sidebar" [class.toggled]="toggled | async">
     Sidebar
   </aside>
-  <div class="overlay"></div>
+  <div class="overlay" (click)="toggleSidebar()"></div>
 
   <!-- メイン画面 -->
   <div class="layout">

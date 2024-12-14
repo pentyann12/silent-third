@@ -1,6 +1,7 @@
 import { NgFor } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Route, RouterLink } from '@angular/router';
+import { LayoutService } from '../service/layout.service';
 
 /**
  * # ページヘッダ
@@ -11,8 +12,13 @@ import { Route, RouterLink } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
   public links: Route[] = [];
+
+  /** constructor of {@link HeaderComponent}. */
+  public constructor(
+    @Inject(LayoutService) private readonly layoutService: LayoutService
+  ) { }
 
   public ngOnInit(): void {
     this.links = [
@@ -29,5 +35,10 @@ export class HeaderComponent implements OnInit{
         title: 'test'
       }
     ]
+  }
+
+  /** サイドバーの表示・非表示を切り替える */
+  public toggleSidebar(): void {
+    this.layoutService.toggleSidebar();
   }
 }

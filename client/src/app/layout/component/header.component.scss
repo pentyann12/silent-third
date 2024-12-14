@@ -39,6 +39,11 @@
   width: 20px;
 }
 
+#header .hamburger{
+  width: 20px;
+  margin-left: -400px; // FIXME: 一時的な位置合わせ
+}
+
 @media screen and (max-width: 600px) {
   .site-title {
     margin-top: 20px;
